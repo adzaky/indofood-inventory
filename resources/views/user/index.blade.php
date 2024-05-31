@@ -21,8 +21,8 @@
               </a>
               @endif
             </div>
-        
-            <div class="overflow-x-scroll">
+
+            <div class="mb-4 overflow-x-scroll">
               <table id="dataTables" class="table-auto border-collapse w-full mt-4">
                 <thead>
                   <tr class="text-center">
@@ -64,7 +64,12 @@
                 </tbody>
               </table>
             </div>
-            {{ $users->links() }}
+            <div class="flex items-center justify-between">
+              <span class="hidden text-sm sm:block"></span>
+              <div class="flex-1 md:flex-none">
+                {{ $users->links() }}
+              </div>
+            </div>
           </div>
         </div>
       </div>

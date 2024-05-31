@@ -64,7 +64,12 @@
                 </tbody>
               </table>
             </div>
-            {{ $suppliers->links() }}
+            <div class="flex items-center justify-between">
+              <span class="hidden text-sm sm:block"></span>
+              <div class="flex-1 md:flex-none">
+                {{ $suppliers->links() }}
+              </div>
+            </div>
           </div>
         </div>
       </div>
