@@ -40,8 +40,8 @@
                     </a>
                 </main>
 
-                <footer class="py-16 text-center text-sm">
-                    Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                <footer class="py-16 text-center text-xl font-bold">
+                    Group 5
                 </footer>
             </div>
         </div>
