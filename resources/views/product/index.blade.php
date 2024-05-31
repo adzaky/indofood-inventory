@@ -33,9 +33,7 @@
                     <th class="border px-4 py-2">Price</th>
                     <th class="border px-4 py-2">Quantity</th>
                     <th class="border px-4 py-2">Supplier</th>
-                    @if (auth()->user()->role == 'admin')
                     <th class="border px-4 py-2">Action</th>
-                    @endif
                   </tr>
                 </thead>
                 <tbody>
