@@ -15,14 +15,14 @@
                         <h1 class="text-2xl text-gray-500 font-semibold mb-2">Total Suppliers</h1>
                         <x-supplier />
                     </div>
-                    <span class="text-2xl font-bold">{{ $totalSuppliers }}</span>
+                    <span class="text-2xl font-bold">{{ $totalSuppliers ?: '0' }}</span>
                 </div>
                 <div class="bg-white mb-4 overflow-hidden shadow-sm sm:rounded-lg p-14">
                     <div class="flex items-center justify-between">
                         <h1 class="text-2xl text-gray-500 font-semibold mb-2">Total Products</h1>
                         <x-product />
                     </div>
-                    <span class="text-2xl font-bold">{{ $totalProducts }}</span>
+                    <span class="text-2xl font-bold">{{ $totalProducts ?: '0' }}</span>
                 </div>
             </div>
 
@@ -104,7 +104,8 @@
                                         <td class="border px-4 py-2">{{ "Rp " . number_format($product->price,2,',','.')
                                             }}</td>
                                         <td class="border px-4 py-2">{{ $product->quantity }}</td>
-                                        <td class="border px-4 py-2">{{ $product->supplierId->name }}</td>
+                                        <td class="border px-4 py-2">{{ $product->supplierId ?
+                                            $product->supplierId->name : 'N/A' }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>

@@ -53,7 +53,7 @@
                     <td class="border px-4 py-2">{{ $product->description }}</td>
                     <td class="border px-4 py-2">{{ "Rp " . number_format($product->price,2,',','.') }}</td>
                     <td class="border px-4 py-2">{{ $product->quantity }}</td>
-                    <td class="border px-4 py-2">{{ $product->supplierId->name }}</td>
+                    <td class="border px-4 py-2">{{ $product->supplierId ? $product->supplierId->name : 'N/A' }}</td>
                     <td class="border px-4 py-2">
                       <form onsubmit="return confirm('Are You Sure?');"
                         action="{{ route('product.destroy', $product->id) }}" method="POST">
