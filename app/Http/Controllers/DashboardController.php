@@ -12,7 +12,10 @@ class DashboardController extends Controller
     {
         $products = Product::latest()->paginate(10);
         $suppliers = Supplier::latest()->paginate(10);
-
-        return view('dashboard', compact('products', 'suppliers'));
+        
+        $totalProducts = $products->total();
+        $totalSuppliers = $suppliers->total();
+        
+        return view('dashboard', compact('products', 'suppliers', 'totalProducts', 'totalSuppliers'));
     }
 }

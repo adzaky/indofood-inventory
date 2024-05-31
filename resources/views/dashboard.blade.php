@@ -8,6 +8,24 @@
     {{-- Dashboard --}}
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            {{-- Statistics --}}
+            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                <div class="bg-white mb-4 overflow-hidden shadow-sm sm:rounded-lg p-14">
+                    <div class="flex items-center justify-between">
+                        <h1 class="text-2xl text-gray-500 font-semibold mb-2">Total Suppliers</h1>
+                        <x-supplier />
+                    </div>
+                    <span class="text-2xl font-bold">{{ $totalSuppliers }}</span>
+                </div>
+                <div class="bg-white mb-4 overflow-hidden shadow-sm sm:rounded-lg p-14">
+                    <div class="flex items-center justify-between">
+                        <h1 class="text-2xl text-gray-500 font-semibold mb-2">Total Products</h1>
+                        <x-product />
+                    </div>
+                    <span class="text-2xl font-bold">{{ $totalProducts }}</span>
+                </div>
+            </div>
+
             {{-- Suppliers --}}
             <div class="bg-white mb-4 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
